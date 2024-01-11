@@ -16,6 +16,9 @@ migrate_working_dir/
 *.iws
 .idea/
 ios/
+lib/constants/
+lib/controllers/
+lib/data/
 android/
 linux/
 macos/
