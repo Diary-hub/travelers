@@ -17,6 +17,8 @@ migrate_working_dir/
 .idea/
 ios/
 lib/constants/
+lib\main.dart
+lib/main.dart
 lib/controllers/
 lib/data/
 android/
@@ -57,3 +59,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+lib/main.dart

@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:travelers/common/helper/oneLine.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
