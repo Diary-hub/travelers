@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:travelers/views/home/home.dart';
+import 'package:travelers/views/Welcome/welcome.dart';
 
 import 'package:travelers/views/Login/login_page.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

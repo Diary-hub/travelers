@@ -1,80 +1,61 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  List images = [
-    "assets/images/login/img1.jpg",
-    "assets/images/login/img2.jpg",
-    "assets/images/login/img3.jpg"
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-          scrollDirection: Axis.vertical,
-          itemCount: images.length,
-          itemBuilder: (_, index) {
-            return Container(
-              width: double.maxFinite,
-              height: double.maxFinite,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(images[index]),
-                  fit: BoxFit.cover,
+      body: ListView(children: [
+        Container(
+          width: 100,
+          height: 300,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/login/one.jpg"),
+                  fit: BoxFit.cover),
+              color: Colors.amber,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30))),
+          child: const Padding(
+            padding: EdgeInsets.only(top: 20, left: 30),
+            child: Text(
+              'Discover',
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontFamily: "Oxygen-bold",
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 40,
+        ),
+        Row(
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: const Icon(
+                    Icons.place,
+                    size: 35,
+                  ),
                 ),
-              ),
-              child: Container(
-                margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
-                child: Row(children: [
-                  Column(children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 115),
-                      child: Text(
-                        'Data',
-                        style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontFamily: "Oxygen-bold",
-                            fontWeight: FontWeight.w700),
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 115),
-                      child: Text(
-                        'Data',
-                        style: TextStyle(
-                          fontSize: 30,
-                          color: Colors.red,
-                          fontFamily: "Oxygen-Light",
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 180,
-                      child: Text(
-                        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since th',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.black,
-                          fontFamily: "Oxygen-Light",
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(onPressed: () {}, child: const Text('data'))
-                  ]),
-                ]),
-              ),
-            );
-          }),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Home'),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text('data')
+              ],
+            )
+          ],
+        )
       ]),
     );
   }
