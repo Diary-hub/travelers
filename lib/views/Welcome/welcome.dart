@@ -107,10 +107,6 @@ class _HomeScreenState extends State<WelcomeScreen> {
               ),
             );
           }),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Home'),
-      ]),
     );
   }
 }
