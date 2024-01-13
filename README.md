@@ -37,7 +37,7 @@ Our project is named (Travelers) and it mainly focuses on travelers who visit Su
 
 ### Our Great Developer Team:
 
-- [Diary Tariq Ibrahim (Leader)]([https://docs.flutter.dev/get-started/codelab](https://www.facebook.com/nah.just4reaal))
+- [Diary Tariq Ibrahim (Leader)](https://www.facebook.com/nah.just4reaal)
 - [Muhammed Salar Hussen](https://www.facebook.com/hamay.hajy.507)
 - [Ahmad Mhmmad Ali](https://www.facebook.com/ahmad.mhamad.31924)
 
