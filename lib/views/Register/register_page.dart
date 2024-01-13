@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travelers/views/Home/home.dart';
-import 'package:travelers/views/Register/register_page.dart';
+import 'package:get/get.dart';
+import 'package:travelers/views/Login/login_page.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,19 +52,31 @@ class LoginPage extends StatelessWidget {
           ),
 
           Positioned(
-            top: 250,
+            top: 200,
             child: Padding(
               padding: const EdgeInsets.only(left: 30, right: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "Login",
+                    "Register",
                     style: TextStyle(
                         fontFamily: "Oxygen",
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
+                  ),
+                  const SizedBox(
+                    width: 350,
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        hintText: "Enter Your Name",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        prefixIcon: Icon(Icons.person_3_outlined),
+                        border: UnderlineInputBorder(),
+                      ),
+                    ),
                   ),
                   SizedBox(height: sH * 0.02),
                   const SizedBox(
@@ -108,12 +120,8 @@ class LoginPage extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
                                     const Color.fromARGB(255, 255, 168, 54)),
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                      builder: (context) => const HomePage()));
-                            },
-                            child: const Text("Login",
+                            onPressed: () {},
+                            child: const Text("Create Account",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontFamily: "Oxygen",
@@ -260,7 +268,7 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text(
-                            "Don't have an account?",
+                            "Already have? ",
                             style: TextStyle(
                                 fontFamily: "Oxygen",
                                 fontSize: 13,
@@ -270,11 +278,10 @@ class LoginPage extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpPage()));
+                                      builder: (context) => const LoginPage()));
                             },
                             child: const Text(
-                              " Register",
+                              " Login",
                               style: TextStyle(
                                   fontFamily: "Oxygen",
                                   fontSize: 13,
