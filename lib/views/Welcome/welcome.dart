@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:travelers/views/home/home.dart';
+import 'package:travelers/views/Home/home.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
 
   @override
-  State<WelcomeScreen> createState() => _HomeScreenState();
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
 }
 
-class _HomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen> {
   List images = [
     "assets/images/login/img1.jpg",
     "assets/images/login/img2.jpg",
@@ -78,7 +78,8 @@ class _HomeScreenState extends State<WelcomeScreen> {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HomePage()));
+                                      builder: (context) =>
+                                          const HomeRedirect()));
                             },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blue),

@@ -111,7 +111,8 @@ class LoginPage extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
-                                      builder: (context) => const HomePage()));
+                                      builder: (context) =>
+                                          const HomeRedirect()));
                             },
                             child: const Text("Login",
                                 style: TextStyle(
