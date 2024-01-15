@@ -19,7 +19,6 @@ ios/
 lib/constants/
 lib\main.dart
 lib/main.dart
-lib/controllers/
 lib/data/
 android/
 linux/
