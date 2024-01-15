@@ -1,14 +1,13 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:travelers/controllers/bottom_controller.dart';
 import 'package:travelers/views/Home/home_screen.dart';
+import 'package:travelers/views/Places/places_page.dart';
 import 'package:travelers/views/QrReader/qrcode_page.dart';
 import 'package:travelers/views/Statues/statues_page.dart';
 import 'package:travelers/views/Welcome/welcome.dart';
-import 'package:travelers/views/home/home.dart';
 
 class HomeRedirect extends StatefulWidget {
   const HomeRedirect({super.key});
@@ -23,88 +22,35 @@ class _HomeRedirectState extends State<HomeRedirect>
 
   final controller = Get.put(BottomBarController());
 
-  late AnimationController _fabAnimationController;
-  late AnimationController _borderRadiusAnimationController;
-  late Animation<double> fabAnimation;
-  late Animation<double> borderRadiusAnimation;
-  late CurvedAnimation fabCurve;
-  late CurvedAnimation borderRadiusCurve;
-  late AnimationController _hideBottomBarAnimationController;
-
   final iconList = <IconData>[
-    Icons.iron,
-    Icons.brightness_4,
-    Icons.brightness_6,
-    Icons.brightness_7,
+    Icons.house_outlined,
+    Icons.stadium_outlined,
+    Icons.solar_power_sharp,
+    Icons.design_services_outlined,
+  ];
+  final labelList = <String>[
+    "Home",
+    "Places",
+    "Statues",
+    "Services",
   ];
 
   @override
   void initState() {
     super.initState();
-
-    _fabAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-    _borderRadiusAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-    fabCurve = CurvedAnimation(
-      parent: _fabAnimationController,
-      curve: const Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
-    );
-    borderRadiusCurve = CurvedAnimation(
-      parent: _borderRadiusAnimationController,
-      curve: const Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
-    );
-
-    fabAnimation = Tween<double>(begin: 0, end: 1).animate(fabCurve);
-    borderRadiusAnimation = Tween<double>(begin: 0, end: 1).animate(
-      borderRadiusCurve,
-    );
-
-    _hideBottomBarAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 200),
-      vsync: this,
-    );
-
-    Future.delayed(
-      const Duration(seconds: 1),
-      () => _fabAnimationController.forward(),
-    );
-    Future.delayed(
-      const Duration(seconds: 1),
-      () => _borderRadiusAnimationController.forward(),
-    );
-  }
-
-  bool onScrollNotification(ScrollNotification notification) {
-    if (notification is UserScrollNotification &&
-        notification.metrics.axis == Axis.vertical) {
-      switch (notification.direction) {
-        case ScrollDirection.forward:
-          _hideBottomBarAnimationController.reverse();
-          _fabAnimationController.forward(from: 0);
-          break;
-        case ScrollDirection.reverse:
-          _hideBottomBarAnimationController.forward();
-          _fabAnimationController.reverse(from: 1);
-          break;
-        case ScrollDirection.idle:
-          break;
-      }
-    }
-    return false;
   }
 
   @override
   Widget build(BuildContext context) {
     return Obx(
       () => Scaffold(
-        body: controller.getIndex() == 1
-            ? const WelcomeScreen()
-            : const HomeScreenPage(),
+        body: controller.getIndex() == 0
+            ? const HomeScreenPage()
+            : controller.getIndex() == 1
+                ? const PlacesPage()
+                : controller.getIndex() == 2
+                    ? StatuesPage()
+                    : const WelcomeScreen(),
         floatingActionButton: FloatingActionButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
@@ -122,7 +68,7 @@ class _HomeRedirectState extends State<HomeRedirect>
         bottomNavigationBar: AnimatedBottomNavigationBar.builder(
           itemCount: iconList.length,
           tabBuilder: (int index, bool isActive) {
-            final color = isActive ? Colors.black : Colors.amber[200];
+            final color = isActive ? Colors.redAccent : Colors.amber[200];
             return Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -136,9 +82,12 @@ class _HomeRedirectState extends State<HomeRedirect>
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: AutoSizeText(
-                    "brightness $index",
+                    labelList[index],
                     maxLines: 1,
-                    style: TextStyle(color: color),
+                    style: TextStyle(
+                      color: color,
+                      fontFamily: "Oxygen",
+                    ),
                     group: autoSizeGroup,
                   ),
                 )
@@ -148,11 +97,9 @@ class _HomeRedirectState extends State<HomeRedirect>
           backgroundColor: const Color.fromARGB(255, 32, 53, 54),
           activeIndex: controller.getIndex(),
           splashRadius: 0,
-          notchAndCornersAnimation: borderRadiusAnimation,
           notchSmoothness: NotchSmoothness.defaultEdge,
           gapLocation: GapLocation.center,
           onTap: (index) => controller.setIndex(index),
-          hideAnimationController: _hideBottomBarAnimationController,
           shadow: const BoxShadow(
             offset: Offset(0, 1),
             blurRadius: 12,
