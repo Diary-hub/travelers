@@ -16,9 +16,6 @@ migrate_working_dir/
 *.iws
 .idea/
 ios/
-lib\main.dart
-lib/main.dart
-lib/data/
 android/
 linux/
 macos/
