@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:reorderable_tabbar/reorderable_tabbar.dart';
-import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 import 'package:travelers/common/widget/StatueTile.dart';
 import 'package:travelers/common/widget/statueListComponent.dart';
 
@@ -66,18 +65,18 @@ class StatuesPage extends StatelessWidget {
                     top: Radius.circular(8),
                   ),
                   reorderingTabBackgroundColor: Colors.black45,
+                  indicatorColor: Colors.blue,
                   indicatorSize: TabBarIndicatorSize.label,
-                  indicator: DotIndicator(
-                    color: Colors.black,
+                  indicator: const BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    color: Colors.amber,
                   ),
                   tabs: tabs,
                 ),
-                const SizedBox(
-                  height: 16,
-                ),
+                SizedBox(height: sH * 0.03),
                 SizedBox(
                   width: double.infinity,
-                  height: 300,
+                  height: sH * 0.26,
                   child: TabBarView(children: [
                     CarouselSlider(
                       items: [
@@ -167,7 +166,7 @@ class StatuesPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: SizedBox(
-                height: 600,
+                height: sH * 0.8,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 00.0, vertical: 30.0),

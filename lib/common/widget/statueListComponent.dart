@@ -11,6 +11,8 @@ class StatueListComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double sH = MediaQuery.of(context).size.height;
+    double sW = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Container(
@@ -21,11 +23,11 @@ class StatueListComponent extends StatelessWidget {
               image: NetworkImage(imgUrl),
             ),
           ),
-          width: 300,
+          width: sW * 0.8,
         ),
         Positioned(
-          top: 200,
-          left: 10,
+          top: sH * 0.21,
+          left: sW * 0.03,
           child: Container(
             decoration: BoxDecoration(
               color: const Color.fromARGB(180, 0, 0, 0),
@@ -38,12 +40,12 @@ class StatueListComponent extends StatelessWidget {
                   const Icon(
                     Icons.location_on_sharp,
                     color: Colors.amber,
-                    size: 25,
+                    size: 20,
                   ),
                   AutoSizeText(
                     locationText,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                       color: Colors.white,
                       fontFamily: "Oxygen",
                       fontWeight: FontWeight.bold,
