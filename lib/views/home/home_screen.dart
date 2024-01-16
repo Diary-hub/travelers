@@ -1,8 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:travelers/common/widget/locAndSub.dart';
 import 'package:travelers/common/widget/statueListComponent.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreenPage extends StatelessWidget {
   const HomeScreenPage({
@@ -15,6 +13,7 @@ class HomeScreenPage extends StatelessWidget {
     double sW = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: sW * .1, top: sH * .01),

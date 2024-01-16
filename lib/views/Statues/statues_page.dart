@@ -26,6 +26,7 @@ class StatuesPage extends StatelessWidget {
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: DefaultTabController(
@@ -65,7 +66,6 @@ class StatuesPage extends StatelessWidget {
                     top: Radius.circular(8),
                   ),
                   reorderingTabBackgroundColor: Colors.black45,
-                  indicatorColor: Colors.blue,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicator: const BoxDecoration(
                     shape: BoxShape.rectangle,

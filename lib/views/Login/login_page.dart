@@ -52,7 +52,7 @@ class LoginPage extends StatelessWidget {
           ),
 
           Positioned(
-            top: 250,
+            top: sH * 0.35,
             child: Padding(
               padding: const EdgeInsets.only(left: 30, right: 30),
               child: Column(
@@ -67,9 +67,9 @@ class LoginPage extends StatelessWidget {
                         color: Colors.white),
                   ),
                   SizedBox(height: sH * 0.02),
-                  const SizedBox(
-                    width: 350,
-                    child: TextField(
+                  SizedBox(
+                    width: sW * 0.85,
+                    child: const TextField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: "Enter Email",
@@ -80,9 +80,9 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: sH * 0.02),
-                  const SizedBox(
-                    width: 350,
-                    child: TextField(
+                  SizedBox(
+                    width: sW * 0.85,
+                    child: const TextField(
                       obscureText: true,
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
@@ -95,15 +95,15 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: sH * 0.02),
                   Container(
-                    constraints:
-                        const BoxConstraints.expand(height: 100, width: 350),
+                    constraints: BoxConstraints.expand(
+                        height: sH * 0.13, width: sW * 0.85),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 280,
-                          height: 60,
+                          width: sW * 0.7,
+                          height: sH * 0.09,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
@@ -127,7 +127,12 @@ class LoginPage extends StatelessWidget {
                           customBorder: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const HomeRedirect()));
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                               color: const Color(0xff244443),
@@ -137,10 +142,10 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.white10,
                               ),
                             ),
-                            width: 50,
-                            height: 50,
+                            width: sW * 0.12,
+                            height: sH * 0.07,
                             child: const Icon(
-                              Icons.qr_code_outlined,
+                              Icons.group_off_outlined,
                               color: Colors.white38,
                               size: 35,
                             ),
@@ -153,7 +158,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Container(
                         height: 1,
-                        width: 150,
+                        width: sW * 0.35,
                         color: Colors.grey,
                         margin: const EdgeInsets.only(left: 10.0, right: 10.0),
                       ),
@@ -165,7 +170,7 @@ class LoginPage extends StatelessWidget {
                               color: Colors.white70)),
                       Container(
                         height: 1,
-                        width: 150,
+                        width: sW * 0.35,
                         color: Colors.grey,
                         margin: const EdgeInsets.only(left: 10.0, right: 10.0),
                       ),
@@ -173,8 +178,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: sH * 0.03),
                   Container(
-                    constraints:
-                        const BoxConstraints.expand(height: 70, width: 365),
+                    constraints: BoxConstraints.expand(
+                        height: sH * 0.1, width: sW * 0.87),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -193,12 +198,12 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.white10,
                               ),
                             ),
-                            width: 100,
-                            height: 70,
+                            width: sW * 0.25,
+                            height: sH * 0.1,
                             child: SvgPicture.asset(
                               "assets/icons/google.svg",
-                              width: 100,
-                              height: 40,
+                              width: sW * 0.25,
+                              height: sH * 0.06,
                             ),
                           ),
                         ),
@@ -217,12 +222,12 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.white10,
                               ),
                             ),
-                            width: 100,
-                            height: 70,
+                            width: sW * 0.25,
+                            height: sH * 0.1,
                             child: SvgPicture.asset(
                               "assets/icons/facebook.svg",
-                              width: 100,
-                              height: 50,
+                              width: sW * 0.25,
+                              height: sH * 0.08,
                             ),
                           ),
                         ),
@@ -241,12 +246,12 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.white10,
                               ),
                             ),
-                            width: 100,
-                            height: 70,
+                            width: sW * 0.25,
+                            height: sH * 0.1,
                             child: SvgPicture.asset(
                               "assets/icons/apple.svg",
-                              width: 50,
-                              height: 35,
+                              width: sW * 0.25,
+                              height: sH * 0.06,
                             ),
                           ),
                         ),
@@ -255,8 +260,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                       alignment: Alignment.center,
-                      constraints:
-                          const BoxConstraints.expand(height: 70, width: 365),
+                      constraints: BoxConstraints.expand(
+                          height: sH * 0.1, width: sW * 0.87),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

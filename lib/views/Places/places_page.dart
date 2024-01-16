@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:reorderable_tabbar/reorderable_tabbar.dart';
-import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 import 'package:travelers/common/widget/StatueTile.dart';
 import 'package:travelers/common/widget/statueListComponent.dart';
 
@@ -27,6 +26,7 @@ class PlacesPage extends StatelessWidget {
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: DefaultTabController(
@@ -67,8 +67,9 @@ class PlacesPage extends StatelessWidget {
                   ),
                   reorderingTabBackgroundColor: Colors.black45,
                   indicatorSize: TabBarIndicatorSize.label,
-                  indicator: DotIndicator(
-                    color: Colors.black,
+                  indicator: const BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    color: Colors.amber,
                   ),
                   tabs: tabs,
                 ),

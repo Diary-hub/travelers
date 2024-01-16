@@ -28,15 +28,15 @@ class StatueTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
                   fit: BoxFit.fill, image: NetworkImage(imgUrl))),
-          width: 130,
-          height: 120,
+          width: sW * 0.31,
+          height: sH * 0.17,
         ),
         SizedBox(width: sW * 0.06),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: sW * 0.55,
+              width: sW * 0.50,
               child: Text(
                 overflow: TextOverflow.ellipsis,
                 textTitle,
@@ -56,7 +56,7 @@ class StatueTile extends StatelessWidget {
                   size: 10,
                 ),
                 SizedBox(
-                  width: sW * 0.45,
+                  width: sW * 0.40,
                   child: const Text(
                     overflow: TextOverflow.ellipsis,
                     "Bardarkari Azadi",
@@ -71,7 +71,7 @@ class StatueTile extends StatelessWidget {
             ),
             SizedBox(height: sH * 0.01),
             SizedBox(
-              width: sW * 0.55,
+              width: sW * 0.50,
               child: const Text(
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
