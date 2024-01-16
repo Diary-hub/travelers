@@ -5,10 +5,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:travelers/firebase_options.dart';
 import 'package:travelers/views/Home/home.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+void main() async {
   runApp(const MyApp());
 }
 

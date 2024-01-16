@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,7 @@ import 'package:travelers/controllers/bottom_controller.dart';
 import 'package:travelers/views/Home/home_screen.dart';
 import 'package:travelers/views/Places/places_page.dart';
 import 'package:travelers/views/QrReader/qrcode_page.dart';
+import 'package:travelers/views/Services/services_page.dart';
 import 'package:travelers/views/Statues/statues_page.dart';
 import 'package:travelers/views/Welcome/welcome.dart';
 
@@ -50,7 +53,7 @@ class _HomeRedirectState extends State<HomeRedirect>
                 ? PlacesPage()
                 : controller.getIndex() == 2
                     ? StatuesPage()
-                    : const WelcomeScreen(),
+                    : const Services_page(),
         floatingActionButton: FloatingActionButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
