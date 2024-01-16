@@ -153,7 +153,35 @@ class HomeScreenPage extends StatelessWidget {
               )
             ],
           ),
-        )
+        ),
+        SizedBox(height: sH * 0.02),
+        const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+            'Recomendation',
+            style: TextStyle(
+                fontFamily: "Oxygen",
+                fontSize: 20,
+                fontWeight: FontWeight.w700),
+          ),
+        ),
+        SizedBox(height: sH * 0.02),
+        CarouselSlider(
+          items: [
+            StatueListComponent(
+                imgUrl: "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
+                locationText: "Bardarkai Sara"),
+            StatueListComponent(
+                imgUrl:
+                    "https://previews.123rf.com/images/elec/elec1502/elec150200697/36936355-statue-of-ibrahim-pasha-in-cairo-egypt.jpg",
+                locationText: "Azadi Mall")
+          ],
+          options: CarouselOptions(
+            aspectRatio: 16 / 10,
+            autoPlay: true,
+            enableInfiniteScroll: true,
+          ),
+        ),
       ]),
       drawer: const Drawer(),
     );
