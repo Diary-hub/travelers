@@ -6,10 +6,7 @@ import 'package:travelers/firebase_options.dart';
 import 'package:travelers/views/Login/login_page.dart';
 import 'package:travelers/views/Welcome/welcome.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+void main() async {
   runApp(const MyApp());
 }
 
