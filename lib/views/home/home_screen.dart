@@ -1,5 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:travelers/common/widget/locAndSub.dart';
+import 'package:travelers/common/widget/statueListComponent.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreenPage extends StatelessWidget {
   const HomeScreenPage({
@@ -10,105 +13,149 @@ class HomeScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double sH = MediaQuery.of(context).size.height;
     double sW = MediaQuery.of(context).size.width;
-    return ListView(children: [
-      const SizedBox(
-        height: 40,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          const Text(
-            'Explore',
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700),
-          ),
-          Container(
-            width: sW * 0.2,
-            height: sH * 0.1,
-            decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black54,
-                  width: 3,
-                ),
-                image: const DecorationImage(
-                    image: AssetImage("assets/images/login/img1.jpg"),
-                    fit: BoxFit.cover),
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(100)),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: sW * .1, top: sH * .01),
+            child: SizedBox(
+              width: sW * 0.14,
+              height: sH * 0.1,
+              child: const CircleAvatar(
+                backgroundImage: AssetImage("assets/images/login/xomGyan.jpg"),
+              ),
+            ),
+          )
         ],
       ),
-      SizedBox(
-        height: sH * 0.06,
-      ),
-      const Padding(
-        padding: EdgeInsets.only(left: 25),
-        child: Text(
-          'Recommendation',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-        ),
-      ),
-      SizedBox(
-        width: double.maxFinite,
-        height: sH * .45,
-        child: ListView.builder(
-            itemCount: 3,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (_, index) {
-              return Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: Container(
+      body: ListView(children: [
+        SizedBox(height: sH * 0.05),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: sW * 0.45,
+                  height: sH * 0.2,
                   decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          image: AssetImage("assets/images/login/one.jpg"),
-                          fit: BoxFit.cover),
-                      color: Colors.black,
+                      color: Colors.red,
                       borderRadius: BorderRadius.circular(30)),
-                  width: 290,
-                  height: 100,
-                  child: Stack(children: [
-                    Positioned(
-                        left: 220,
-                        top: 10,
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(100)),
-                          child: const Icon(
-                            Icons.bookmark,
-                            color: Colors.blue,
-                          ),
-                        )),
-                    const Positioned(
-                        top: 230,
-                        left: 20,
-                        child: SizedBox(
-                          width: 180,
-                          child: Text(
-                            'Ramada Hotel&Spa',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w700),
-                          ),
-                        ))
-                  ]),
-                ),
-              );
-            }),
-      ),
-      const SizedBox(
-        height: 40,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          locAndSub(icon: const Icon(Icons.place), text: 'Places'),
-          locAndSub(icon: const Icon(Icons.place), text: 'Places'),
-          locAndSub(icon: const Icon(Icons.place), text: 'Places'),
-        ],
-      )
-    ]);
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        'My Favourite',
+                        style: TextStyle(
+                            fontFamily: "Oxygen",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                          width: 70,
+                          height: 70,
+                          child: Image.asset("assets/images/login/heart.png"))
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  width: sW * 0.45,
+                  height: sH * 0.2,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        'Try Ur Luck',
+                        style: TextStyle(
+                            fontFamily: "Oxygen",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                          width: 70,
+                          height: 70,
+                          child: Image.asset("assets/images/login/finger.png"))
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: sH * 0.01),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.blueAccent,
+                    ),
+                    width: sW * 0.45,
+                    height: sH * 0.15,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        const Text(
+                          'Services',
+                          style: TextStyle(
+                              fontFamily: "Oxygen",
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          width: sW * .2,
+                          child: Image.asset("assets/images/login/rc.png"),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: sW * 0.45,
+                    height: sH * 0.15,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.amber,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        const Text(
+                          'Map',
+                          style: TextStyle(
+                              fontFamily: "Oxygen",
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          width: sW * .2,
+                          child:
+                              Image.asset("assets/images/login/favourite.png"),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        )
+      ]),
+      drawer: const Drawer(),
+    );
   }
 }
