@@ -47,7 +47,7 @@ class _HomeRedirectState extends State<HomeRedirect>
         body: controller.getIndex() == 0
             ? const HomeScreenPage()
             : controller.getIndex() == 1
-                ? const PlacesPage()
+                ? PlacesPage()
                 : controller.getIndex() == 2
                     ? StatuesPage()
                     : const WelcomeScreen(),
@@ -60,8 +60,30 @@ class _HomeRedirectState extends State<HomeRedirect>
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const QrCodeReaderPage()));
+            showModalBottomSheet(
+                constraints: const BoxConstraints(maxHeight: 120),
+                context: context,
+                builder: (context) {
+                  return Column(children: [
+                    ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      onTap: () {},
+                      title: const Text("AI Scanner"),
+                    ),
+                    ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      onTap: () {
+                        Navigator.pop(context);
+
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const QrCodeReaderPage()));
+                      },
+                      title: const Text("QR Code Scanner"),
+                    ),
+                  ]);
+                });
           },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
