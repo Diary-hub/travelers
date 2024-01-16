@@ -11,13 +11,14 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   List images = [
     "assets/images/login/img1.jpg",
-    "assets/images/login/img2.jpg",
-    "assets/images/login/img3.jpg"
+    "assets/images/login/rasm2.jpg",
+    "assets/images/login/rasm3.jpg"
   ];
   @override
   Widget build(BuildContext context) {
     double sH = MediaQuery.of(context).size.height;
     double sW = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: PageView.builder(
           scrollDirection: Axis.vertical,
@@ -33,7 +34,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
               child: Container(
-                margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
+                margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
