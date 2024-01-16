@@ -14,7 +14,8 @@ class Services_page extends StatelessWidget {
       body: SizedBox(
         width: sW,
         height: sH,
-        child: ListView(
+        child: PageView(
+          scrollDirection: Axis.vertical,
           children: [
             Container(
               color: Colors.white,
@@ -32,7 +33,8 @@ class Services_page extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            Container(
+              color: Colors.white,
               height: sH * .94,
               width: sW,
               child: Column(
@@ -162,7 +164,7 @@ class Services_page extends StatelessWidget {
                                 height: 40,
                               ),
                               Text(
-                                "Hikers",
+                                "Guiders",
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.w500),
                               ),
@@ -177,12 +179,154 @@ class Services_page extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  )
                 ],
               ),
-            )
+            ),
+            Container(
+              color: Colors.white,
+              height: sH * .94,
+              width: sW,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: sW * 0.46,
+                          height: sH * .285,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Image.asset("assets/images/login/Hotel.png"),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: sW * 0.46,
+                          height: sH * .285,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: const Center(
+                              child: Column(
+                            children: [
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Text(
+                                "Hotel ",
+                                style: TextStyle(
+                                    fontSize: 30, fontWeight: FontWeight.w500),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 20, top: 20),
+                                child: Text(
+                                    "recommend the nearest hotels based on your cost"),
+                              ),
+                              Text("")
+                            ],
+                          )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: sW * 0.46,
+                          height: sH * .285,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: const Center(
+                              child: Column(
+                            children: [
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Text(
+                                "Translator",
+                                style: TextStyle(
+                                    fontSize: 30, fontWeight: FontWeight.w500),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 30, top: 20),
+                                child: Text("the best translators in the city"),
+                              )
+                            ],
+                          )),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: sW * 0.46,
+                          height: sH * .285,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child:
+                              Image.asset("assets/images/login/translator.png"),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: sW * 0.46,
+                          height: sH * .285,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Image.network(
+                            "https://shmector.com/_ph/13/326800047.png",
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          width: sW * 0.46,
+                          height: sH * .287,
+                          child: const Center(
+                              child: Column(
+                            children: [
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Text(
+                                "Transportation",
+                                style: TextStyle(
+                                    fontSize: 27, fontWeight: FontWeight.w500),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 7, top: 20.0),
+                                child: Text("finding nerest transport station"),
+                              )
+                            ],
+                          )),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
