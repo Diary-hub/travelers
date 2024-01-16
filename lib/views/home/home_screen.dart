@@ -28,7 +28,17 @@ class HomeScreenPage extends StatelessWidget {
         ],
       ),
       body: ListView(children: [
-        SizedBox(height: sH * 0.05),
+        Padding(
+          padding: EdgeInsets.only(top: sH * 0.03, left: sW * 0.055),
+          child: const Text(
+            'Explore & Enjoy',
+            style: TextStyle(
+                fontFamily: "Oxygen",
+                fontSize: 20,
+                fontWeight: FontWeight.w700),
+          ),
+        ),
+        SizedBox(height: sH * 0.03),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -65,7 +75,7 @@ class HomeScreenPage extends StatelessWidget {
                   width: sW * 0.45,
                   height: sH * 0.2,
                   decoration: BoxDecoration(
-                      color: Colors.green,
+                      color: Colors.amber[400],
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -128,7 +138,7 @@ class HomeScreenPage extends StatelessWidget {
                     height: sH * 0.15,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.amber,
+                      color: Colors.green,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -154,9 +164,9 @@ class HomeScreenPage extends StatelessWidget {
           ),
         ),
         SizedBox(height: sH * 0.02),
-        const Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Text(
+        Padding(
+          padding: EdgeInsets.only(left: sW * 0.05),
+          child: const Text(
             'Recomendation',
             style: TextStyle(
                 fontFamily: "Oxygen",
@@ -176,10 +186,10 @@ class HomeScreenPage extends StatelessWidget {
                 locationText: "Azadi Mall")
           ],
           options: CarouselOptions(
-            aspectRatio: 16 / 10,
-            autoPlay: true,
-            enableInfiniteScroll: true,
-          ),
+              aspectRatio: 16 / 10,
+              autoPlay: true,
+              enableInfiniteScroll: true,
+              viewportFraction: 0.85),
         ),
       ]),
       drawer: const Drawer(),
