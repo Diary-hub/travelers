@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:travelers/firebase_options.dart';
-import 'package:travelers/views/Home/home.dart';
+import 'package:travelers/views/Login/login_page.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeRedirect(),
+      home: LoginPage(),
     );
   }
 }
