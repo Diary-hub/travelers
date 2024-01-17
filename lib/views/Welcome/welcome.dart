@@ -35,14 +35,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               child: Container(
                 margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(children: [
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         const Padding(
                           padding: EdgeInsets.only(right: 115),
                           child: Text(
-                            'Data',
+                            'Welcome Traveler',
                             style: TextStyle(
                                 fontSize: 30,
                                 color: Colors.black,
@@ -53,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         const Padding(
                           padding: EdgeInsets.only(right: 115),
                           child: Text(
-                            'Data',
+                            'Introduction',
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.red,
@@ -64,7 +65,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         SizedBox(
                           width: sW * .45,
                           child: const Text(
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry industrys standard dummy text ever since th',
+                            'While using this application you will be abale to handle and get what you need in this city and the history of the recommended places and things that a travelers could need.',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black,
@@ -85,27 +86,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blue),
                             child: const Text(
-                              'data',
+                              'Next',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
                         )
                       ]),
-                      Column(
-                        children: List.generate(3, (indexDots) {
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 2),
-                            width: 8,
-                            height: index == indexDots ? 25 : 8,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: index == indexDots
-                                    ? Colors.amber
-                                    : Colors.amber[100]),
-                          );
-                        }),
-                      )
-                    ]),
+                  Column(
+                    children: List.generate(3, (indexDots) {
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 2),
+                        width: 8,
+                        height: index == indexDots ? 25 : 8,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: index == indexDots
+                                ? Colors.amber
+                                : Colors.amber[100]),
+                      );
+                    }),
+                  )
+                ]),
               ),
             );
           }),

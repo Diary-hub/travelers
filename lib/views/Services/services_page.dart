@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:velocity_x/velocity_x.dart';
 
+// ignore: camel_case_types
 class Services_page extends StatelessWidget {
   const Services_page({super.key});
 
@@ -79,7 +77,7 @@ class Services_page extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(left: 20, top: 20),
                                 child: Text(
-                                    "recommend the nearest restaurant based on your cost"),
+                                    "Recommend the nearest restaurant based on your budget"),
                               ),
                               Text("")
                             ],
@@ -112,7 +110,7 @@ class Services_page extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(left: 40, top: 20),
                                 child: Text(
-                                    "the palaces that are important to travelers to see"),
+                                    "The palaces that are important to travelers to see or need"),
                               )
                             ],
                           )),
@@ -134,11 +132,10 @@ class Services_page extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Container(
                           alignment: Alignment.center,
                           width: sW * 0.46,
-                          height: sH * .285,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                           ),
@@ -150,7 +147,7 @@ class Services_page extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
@@ -171,7 +168,7 @@ class Services_page extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(left: 20, top: 20.0),
                                 child: Text(
-                                    "best guiders in the city will be in service"),
+                                    "Best guiders in the city will be in service"),
                               )
                             ],
                           )),
@@ -227,7 +224,7 @@ class Services_page extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(left: 20, top: 20),
                                 child: Text(
-                                    "recommend the nearest hotels based on your cost"),
+                                    "Recommend the nearest hotels based on your budget"),
                               ),
                               Text("")
                             ],
@@ -259,7 +256,7 @@ class Services_page extends StatelessWidget {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 30, top: 20),
-                                child: Text("the best translators in the city"),
+                                child: Text("The best translators in the city"),
                               )
                             ],
                           )),
@@ -286,7 +283,6 @@ class Services_page extends StatelessWidget {
                         child: Container(
                           alignment: Alignment.center,
                           width: sW * 0.46,
-                          height: sH * .285,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                           ),
@@ -296,7 +292,7 @@ class Services_page extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
@@ -316,7 +312,8 @@ class Services_page extends StatelessWidget {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 7, top: 20.0),
-                                child: Text("finding nerest transport station"),
+                                child: Text(
+                                    "Finding the nerest transport station"),
                               )
                             ],
                           )),

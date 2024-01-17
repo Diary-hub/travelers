@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +8,6 @@ import 'package:travelers/views/Places/places_page.dart';
 import 'package:travelers/views/QrReader/qrcode_page.dart';
 import 'package:travelers/views/Services/services_page.dart';
 import 'package:travelers/views/Statues/statues_page.dart';
-import 'package:travelers/views/Welcome/welcome.dart';
 
 class HomeRedirect extends StatefulWidget {
   const HomeRedirect({super.key});
@@ -93,7 +90,7 @@ class _HomeRedirectState extends State<HomeRedirect>
         bottomNavigationBar: AnimatedBottomNavigationBar.builder(
           itemCount: iconList.length,
           tabBuilder: (int index, bool isActive) {
-            final color = isActive ? Colors.redAccent : Colors.amber[200];
+            final color = isActive ? Colors.amber[200] : Colors.white;
             return Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -119,7 +116,7 @@ class _HomeRedirectState extends State<HomeRedirect>
               ],
             );
           },
-          backgroundColor: const Color.fromARGB(255, 32, 53, 54),
+          backgroundColor: const Color.fromARGB(255, 0, 0, 0),
           activeIndex: controller.getIndex(),
           splashRadius: 0,
           notchSmoothness: NotchSmoothness.defaultEdge,

@@ -174,6 +174,7 @@ class PlacesPage extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://thetheatretimes.com/wp-content/uploads/2017/01/images-cms-image-000024794-620x300.jpg",
                           textTitle: "Hawari Shar Rome Park",
@@ -181,6 +182,7 @@ class PlacesPage extends StatelessWidget {
                           sH: sH),
                       SizedBox(height: sH * 0.02),
                       StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://thetheatretimes.com/wp-content/uploads/2017/01/images-cms-image-000024794-620x300.jpg",
                           textTitle: "Hawari Shar Rome Park",
@@ -188,6 +190,7 @@ class PlacesPage extends StatelessWidget {
                           sH: sH),
                       SizedBox(height: sH * 0.02),
                       StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://thetheatretimes.com/wp-content/uploads/2017/01/images-cms-image-000024794-620x300.jpg",
                           textTitle: "Hawari Shar Rome Park",
@@ -195,6 +198,7 @@ class PlacesPage extends StatelessWidget {
                           sH: sH),
                       SizedBox(height: sH * 0.02),
                       StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://thetheatretimes.com/wp-content/uploads/2017/01/images-cms-image-000024794-620x300.jpg",
                           textTitle: "Hawari Shar Rome Park",

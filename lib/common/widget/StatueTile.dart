@@ -10,12 +10,14 @@ class StatueTile extends StatelessWidget {
     required this.sH,
     required this.imgUrl,
     required this.textTitle,
+    required this.location_,
   });
 
   final double sW;
   final double sH;
   final String textTitle;
   final String imgUrl;
+  final String location_;
 
   @override
   Widget build(BuildContext context) {
@@ -57,10 +59,10 @@ class StatueTile extends StatelessWidget {
                 ),
                 SizedBox(
                   width: sW * 0.40,
-                  child: const Text(
+                  child: Text(
                     overflow: TextOverflow.ellipsis,
-                    "Bardarkari Azadi",
-                    style: TextStyle(
+                    location_,
+                    style: const TextStyle(
                         fontFamily: "Oxygen",
                         fontSize: 14,
                         color: Colors.redAccent,
@@ -72,11 +74,11 @@ class StatueTile extends StatelessWidget {
             SizedBox(height: sH * 0.01),
             SizedBox(
               width: sW * 0.50,
-              child: const Text(
+              child: Text(
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                "A Nice paikar thats about me and you who canoot be mn and you",
-                style: TextStyle(
+                "A nice statue thats locations is in $location_ and it has a uniqe history",
+                style: const TextStyle(
                     fontFamily: "Oxygen",
                     fontSize: 13,
                     color: Colors.grey,

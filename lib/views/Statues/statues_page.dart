@@ -82,8 +82,8 @@ class StatuesPage extends StatelessWidget {
                       items: [
                         StatueListComponent(
                             imgUrl:
-                                "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
-                            locationText: "Bardarkai Sara"),
+                                "https://live.staticflickr.com/65535/52168081898_8f3ba0e179_b.jpg",
+                            locationText: "Halabja Monument"),
                         StatueListComponent(
                             imgUrl:
                                 "https://previews.123rf.com/images/elec/elec1502/elec150200697/36936355-statue-of-ibrahim-pasha-in-cairo-egypt.jpg",
@@ -174,6 +174,15 @@ class StatuesPage extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       StatueTile(
+                          location_: "Bakhi Gshty",
+                          imgUrl:
+                              "https://live.staticflickr.com/3797/10266379966_bf2ae82c3b_b.jpg",
+                          textTitle: "Statue of Heros",
+                          sW: sW,
+                          sH: sH),
+                      SizedBox(height: sH * 0.02),
+                      StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
                           textTitle: "Statue of Bardarki Sara",
@@ -181,6 +190,7 @@ class StatuesPage extends StatelessWidget {
                           sH: sH),
                       SizedBox(height: sH * 0.02),
                       StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
                           textTitle: "Statue of Bardarki Sara",
@@ -188,13 +198,7 @@ class StatuesPage extends StatelessWidget {
                           sH: sH),
                       SizedBox(height: sH * 0.02),
                       StatueTile(
-                          imgUrl:
-                              "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
-                          textTitle: "Statue of Bardarki Sara",
-                          sW: sW,
-                          sH: sH),
-                      SizedBox(height: sH * 0.02),
-                      StatueTile(
+                          location_: "Bardarki Sara",
                           imgUrl:
                               "https://pbs.twimg.com/media/EmxO2y8XMAI03No.jpg:large",
                           textTitle: "Statue of Bardarki Sara",
