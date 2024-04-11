@@ -45,7 +45,6 @@ Our project is named (Travelers) and it mainly focuses on travelers who visit Su
 ![gg](https://github.com/Diary-hub/travelers/assets/39463871/393d2d41-fd91-40d5-9825-afb5c349e06c)
 ![7](https://github.com/Diary-hub/travelers/assets/39463871/924995bf-a9d8-4e6e-b79f-308c0c2f812c)
 ![3](https://github.com/Diary-hub/travelers/assets/39463871/89bbccb4-87fa-499b-9c53-67161de289c0)
-![4](https://github.com/Diary-hub/travelers/assets/39463871/3fecbc4e-07de-4cf6-b98a-47386fa43177)
-![6](https://github.com/Diary-hub/travelers/assets/39463871/4a509ede-c0ee-447d-bba3-3d997340bdc8)
+![4](https://github.com/Diary-hub/travelers/assets/39463871/3fecbc4e-07de-4cf6-b98a-47386fa43177) ![6](https://github.com/Diary-hub/travelers/assets/39463871/4a509ede-c0ee-447d-bba3-3d997340bdc8)
 
 
