@@ -1,5 +1,5 @@
 # Travelers
-A Project that hopes to solve a challenge in our city and make it an interesting area.
+A Project that hopes to solve a challenge in our city and make it an interesting area. Based on Web and Mobile Appication
 
 ## The Challenge
 In Kurdistan, there are a lot of ancient places and Statues of great stories and peoples, and mainly a great part of them, no one knows about the history of it, or why it was built, this App focuses on making people acquainted with our culture and history.
@@ -40,4 +40,12 @@ Our project is named (Travelers) and it mainly focuses on travelers who visit Su
 - [Diary Tariq Ibrahim (Leader)](https://www.facebook.com/nah.just4reaal)
 - [Muhammed Salar Hussen](https://www.facebook.com/hamay.hajy.507)
 - [Ahmad Mhmmad Ali](https://www.facebook.com/ahmad.mhamad.31924)
+
+## Screenshots
+![gg](https://github.com/Diary-hub/travelers/assets/39463871/393d2d41-fd91-40d5-9825-afb5c349e06c)
+![7](https://github.com/Diary-hub/travelers/assets/39463871/924995bf-a9d8-4e6e-b79f-308c0c2f812c)
+![3](https://github.com/Diary-hub/travelers/assets/39463871/89bbccb4-87fa-499b-9c53-67161de289c0)
+![4](https://github.com/Diary-hub/travelers/assets/39463871/3fecbc4e-07de-4cf6-b98a-47386fa43177)
+![6](https://github.com/Diary-hub/travelers/assets/39463871/4a509ede-c0ee-447d-bba3-3d997340bdc8)
+
 
